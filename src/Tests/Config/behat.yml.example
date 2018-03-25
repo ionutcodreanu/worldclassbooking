@@ -1,0 +1,22 @@
+default:
+    autoload:
+        - %paths.base%/../Bootstrap/
+    extensions:
+            Behat\MinkExtension:
+                selenium2:
+                    wd_host: "http://localhost:8040/wd/hub"
+                base_url: 'https://members.worldclass.ro/'
+                default_session: selenium2
+                browser_name: chrome
+    suites:
+        default:
+            paths:
+                - "%paths.base%/../Features"
+            contexts:
+                - WorldClassBooker\Tests\Bootstrap\FeatureContext:
+                    - 'username'
+                    - 'pincode'
+                    - 'member-schedule.php'
+                    - 'ADRIAN BOROZAN'
+                    - 'Cycling'
+                    - 'World Class Lujerului'

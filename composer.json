@@ -1,0 +1,21 @@
+{
+  "name": "ionutcodreanu/worldclassbooker",
+  "description": "WorldClass class booking",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ionut Codreanu",
+      "email": "ionutcodreanu@outlook.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"WorldClassBooker\\": "src"}
+  },
+  "require": {
+    "behat/behat": "^3.0",
+    "behat/mink-extension": "^2.1",
+    "behat/mink-selenium2-driver": "^1.3",
+    "behatch/contexts": "*"
+  }
+}
