@@ -119,7 +119,7 @@ class FeatureContext extends MinkContext
             ]
         );
         if (!$clubSelectorOption) {
-            throw new ElementNotFoundException($this->getSession()->getDriver(), 'form', 'id', $clubSelector);
+            throw new ElementNotFoundException($this->getSession()->getDriver(), 'form', 'id', $clubSelectorOption);
         }
         $value = $clubSelectorOption->getValue();
         $this->clubId = $value;

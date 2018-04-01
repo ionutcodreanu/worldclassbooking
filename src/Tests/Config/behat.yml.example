@@ -1,22 +1,28 @@
 default:
     autoload:
-        - %paths.base%/../Bootstrap/
+            - "%paths.base%/../Bootstrap/"
+            - "%paths.base%/../Features"
     extensions:
-            Behat\MinkExtension:
-                selenium2:
-                    wd_host: "http://localhost:8040/wd/hub"
-                base_url: 'https://members.worldclass.ro/'
-                default_session: selenium2
-                browser_name: chrome
-    suites:
-        default:
-            paths:
-                - "%paths.base%/../Features"
-            contexts:
-                - WorldClassBooker\Tests\Bootstrap\FeatureContext:
-                    - 'username'
-                    - 'pincode'
-                    - 'member-schedule.php'
-                    - 'ADRIAN BOROZAN'
-                    - 'Cycling'
-                    - 'World Class Lujerului'
+        Behat\MinkExtension:
+            base_url: 'https://members.worldclass.ro/'
+            default_session: selenium2
+            selenium2:
+                browser: chrome
+                wd_host: "http://localhost:8040/wd/hub"
+                capabilities:
+                    chrome:
+                        switches:
+                            - "--headless"
+                            - "--disable-gpu"
+#    suites:
+#        default:
+#            paths:
+#                - "%paths.base%/../Features"
+#            contexts:
+#                - WorldClassBooker\Tests\Bootstrap\FeatureContext:
+#                    - 'username'
+#                    - 'pincode'
+#                    - 'member-schedule.php'
+#                    - ''
+#                    - 'Cycling'
+#                    - 'World Class Lujerului'
