@@ -14,6 +14,8 @@ default:
                         switches:
                             - "--headless"
                             - "--disable-gpu"
+                            - "--no-sandbox"
+                            - "--single-process"
 #    suites:
 #        default:
 #            paths:
